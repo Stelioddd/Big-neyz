@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>BIG NEYZ net</title>
+    
+        <link rel="icon" type="image/png" href="#">
+        
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" >
+    <style>
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: goldenrod;
+    padding-top: 60px; /* Espaço para a navbar fixa */
+}
+
+/* Navbar fixa no topo */
+nav {
+    background-color: #222;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Lista de links */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+/* Efeito hover */
+.nav-links a:hover {
+    background-color: darkcyan;
+}
+
+/* Botão hambúrguer */
+.menu-toggle {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+    }
+
+/* Quando o menu é aberto */
+.nav-links.show {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Quando o menu está fechando */
+.nav-links.hide {
+    animation: fadeOut 0.4s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform:#00042D9E translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-10px); }
+}
+.section {  
+        padding: 20px;  
+         }
+
+.section h2 {
+background: #000849;
+color: white;
+padding: 10px;
+border-radius: 7px;
+}
+.bot, .app  {
+background: #DADADA;
+margin: 10px;
+padding: 10px;
+box-shadow: 0 0 5px rgba(0,0,0,0.1);
+border-radius: 2px;
+}
+.bot img, .app img {
+max-width: 100%;
+height: auto;
+}
+.bot h3, .app h3 {
+margin: 10px 0;
+}
+.bot p, .app p {
+color: #666;
+}
+.bot .price, .app .price {
+color: green;
+font-weight: bold;
+}
+.footer {
+background: #181818;
+color: white;
+border-radius:5px;
+text-align: center;
+padding: 10px 30px 2px;
+}
+     .botao {  
+           display: inline-block;  
+           padding: 5px 7px;  
+           background-color: blue;  
+           color: white;  
+           text-decoration: none;  
+           border-radius: 5px;  
+           font-size: 16px;  
+            }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links">
+        <a href="#arquivos-VPN"> arquivos VPN</a>
+        <a href="#apps-populares">APPS Populares</a>
+        <a href="#vip">VIP</a>
+        <a href="#recomendados">Recomendados</a>
+        <a href="#sobre-nos">Sobre Nós</a>
+    </nav>
+
+    <!-- Seção de Bots Populares -->
+    <div class="section" id="bots-populares">
+        <h2>APPS Populares</h2>
+        <div class="bot">
+            <img src="https://i.postimg.cc/4NSB5tZC/il-yd-H8d-KELz-Jee-Oubtr-No-SRymgv-Sflo-Jm9th0-BUMhdp1i-VMZFIZew4u7-Od-ELM6-L0y.png" alt="HTTP INJETOR">
+            <h3>http injetor</h3>
+            <p>Http injector 
+Então <dispon></dispon>íveis arquivos semanais mensais e arquivos sem data de validade.</p>
+            <p class="price">00.0 MT</p>
+            <a href="https://play.google.com/store/apps/details?id=com.evozi.injector" download class="botao">Baixar</a>
+        </div>
+        <div class="bot">
+            <img src="https://i.postimg.cc/pV0ZW8m9/afg1in-TYs1-PK064-FF-cq6s-GURNu-R4zm-Xo-QRQi-Uz-ZAo2-Gby-Zx-FP5v1-Jy-I3-Bi-BNM6t-Bw.png" alt="HTTP CUSTOM">
+            <h3>http custom</h3>
+            <p>Descrição do http custom.</p>
+            <p class="price">00.0 MT</p>
+            <a href="https://play.google.com/store/apps/details?id=xyz.easypro.httpcustom" download class="botao">Baixar</a>
+        </div>
+          <div class="bot">
+            <img src="https://i.postimg.cc/5N6m60zs/Zer-Q-r6-QObb2b4q-D9-LBb-Ajy-OISc6-DZKsn-Heaqd-JAW2-S1ygsj-B-A-w71-Ks-ZNs-YI0-C2r0.png" alt="WYR VPN">
+            <h3>wyrVPN</h3>
+            <p>wyrVPN <e></e> um vpn muito rápido a configuração dele é muito eficiente e fácil de se usar boa escolha.</p>
+            <p class="price">00.0 MT</p>
+            <a href="https://play.google.com/store/apps/details?id=com.wyrhub.vpn" download class="botao">Baixar</a>
+        </div>
+                  <div class="bot">
+            <img src="https://i.postimg.cc/529pb33F/Screenshot-20250325-105654.jpg" alt="express">
+            <h3>express</h3>
+            <p>Express vpn, é uma VPN premium rápido segura de se usar..</p>
+            <p class="price">00.0 MT</p>
+            <a href="https://play.google.com/store/apps/details?id=com.expressvpn.vpn" download class="botao">Baixar</a>
+        </div>
+                  <div class="bot">
+            <img src="https://i.postimg.cc/Y0bkVRRz/Screenshot-20250325-105721.jpg" alt="INT vpn">
+            <h3>INT VPN</h3>
+            <p>INT VPN, É a VPN que no momento tem boa velocidade e é segura de se usar.</p>
+            <p class="price">00.0 MT</p>
+            <a href="https://play.google.com/store/apps/details?id=com.wyrhub.intvpn" download class="botao">Baixar</a>
+        </div>
+                  <div class="bot">
+            <img src="https://i.postimg.cc/qq5BqQKM/<Screenshot-20250325-110149 class.jpg</Screenshot-20250325-110149>" alt="MD proxy">
+            <h3>MD proxy</h3>
+            <p>MD proxy, uma vpn rápida, muito fácil de se usar servidor disponíveis.</p>
+                   <p class="price">00.0 MT</p>
+            <a href="https://play.google.com/store/apps/details?id=com.vpnproxymd.mdproxyvpn" download class="botao">Baixar</a>
+        </div>
+        <!-- Adicione mais bots conforme necessário -->
+    </div>
+
+    <!-- Seção de Apps Populares -->
+    <div class="section" id="arquivos-VPN">
+        <h2>arquivos VPN</h2>
+        <div class="bot">
+            <img src="imagem_app1.jpg" alt="app 1">
+            <h3>http injetor</h3>
+            <p>Http injector 
+Então disponíveis arquivos semanais mensais e arquivos sem data de validade.</p>
+            <p class="price">🔸 20.0 MT</p>
+            <p class="price">🔸 40.0 MT</p>
+            <a href="https://wa.link/p6zjj3" download class="botao">comprar</a>
+        </div>
+  <div class="bot">
+            <img src="imagem_app2.jpg" alt="app 2">
+            <h3>http custom</h3>
+            <p>Estão disponíveis arquivos semanais mensais e arquivos sem data de validade</p>
+            <p class="price">🔸 20.0 MT</p>
+            <p class="price">🔸 40.0 MT</p>
+            <a href="https://wa.link/ax11bn" download class="botao">comprar</a>
+        </div>
+          <div class="bot">
+            <img src="imagem_app3.jpg" alt="app 3">
+            <h3>wyrVPN</h3>
+            <p>Estão disponíveis arquivos semanais mensais e arquivos sem data de validade</p>
+            <p class="price">🔸 20.0 MT</p>
+            <p class="price">🔸 40.0 MT</p>
+            <a href="https://wa.link/i7ycva" download class="botao">comprar</a>
+        </div>
+          <div class="bot">
+            <img src="imagem_app4.jpg" alt="app 4">
+            <h3>expresss</h3>
+            <p>Estão disponíveis arquivos semanais mensais e arquivos sem data de validade</p>
+            <p class="price">🔸 20.0 MT</p>
+            <p class="price">🔸 40.0 MT</p>
+            <a href="https://wa.link/28red6" download class="botao">comprar</a>
+        </div>
+          <div class="bot">
+            <img src="imagem_app5.jpg" alt="app 5">
+            <h3>INT VPN</h3>
+            <p>Estão disponíveis arquivos semanais mensais e arquivos sem data de validade</p>
+            <p class="price">🔸 20.0 MT</p>
+            <p class="price">🔸 40.0 MT</p>
+            <a href="https://wa.link/p2vwgl" download class="botao">comprar</a>
+        </div>
+          <div class="bot">
+            <img src="imagem_app6.jpg" alt="app 6">
+            <h3>MOD proxy</h3>
+            <p>Estão disponíveis arquivos semanais mensais e arquivos sem data de validade</p>
+                   <p class="price">🔸 20.0 MT</p>
+            <p class="price">🔸 40.0 MT</p>
+            <a href="https://wa.link/pp1xg8" download class="botao">comprar</a>
+        <!-- Adicione mais apps conforme necessário -->
+   </div>
+           <!-- Seção de VIP -->
+            <div class="section" id="vip">
+          <h2>VIP</h2>
+           <div class="bot">
+            <img src="https://i.postimg.cc/XJFfrSVN/Picsart-25-03-26-20-04-33-328.png" alt="vip">
+            <h3>SNI ILIMITADA</h3>
+            <p>✴️𝐕𝐈𝐏✴️</p></p>
+            <p class="price">🔹 90 MT</p>
+            <a href="https://wa.link/thmk46" download class="botao">PAGAR 𝗩𝗜𝗣</a>
+            </div>
+   
+
+    <!-- Seção de Recomendados -->
+        <div class="section" id="Recomendados">
+          <h2>Recomendados</h2>
+      
+     
+        <div class="bot">
+            <img src="imagem_bot1.jpg" alt="app 1">
+            <h3>http injetor</h3>
+            <p>🔥🔥🔥💯</p></p>
+            <p class="price">40 MT</p>
+            <a href="https://exemplo.com/arquivo.zip" download class="botao">comprar</a>
+            </div>
+            
+               <div class="bot">
+            <img src="imagem_bot2.jpg" alt="app 2">
+            <h3>wyrVPN</h3>
+            <p>🔥🔥🔥💯</p></p>
+            <p class="price">40 MT <MT></MT></p>
+            <a href="https://exemplo.com/arquivo.zip" download class="botao">comprar</a>
+        <!-- Adicione mais recomendações conforme necessário -->
+    </div>
+      
+
+    <!-- Seção Sobre Nós -->
+    <div class="section" id="sobre-nos">
+        <h2>Sobre Nós</h2>
+        <p>Bem-vindo ao nosso site! Somos uma equipe apaixonada por internet VPN privada a alta velocidade para os dispositivos android, iPhone,PC e.t.c. dedicados a oferecer a melhor INTERNET ILIMITADA VPN para todas as operadoras. Fundada com a missão de ajudar a todos a terem internet free (grátis), nossa empresa se destaca pelo crescimento. </p>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <p>&copy; 2025 Site de VPN e NET grátis. Todos os direitos reservados.</p>
+    <p>Contato: dstelio207@gmail.com</p>
+    <p>Telefone: +258 871 978 024</p
+    </div>
+<script>
+  function toggleMenu() {
+    let navLinks = document.querySelector(".nav-links");
+    
+    if (navLinks.classList.contains("show")) {
+        navLinks.classList.remove("show");
+        navLinks.classList.add("hide");
+
+        // Aguarda a animação de saída antes de esconder
+        setTimeout(() => {
+            navLinks.style.display = "none";
+            navLinks.classList.remove("hide");
+        }, 300); // Tempo igual ao da animação (0.3s)
+    } else {
+        navLinks.style.display = "flex";
+        navLinks.classList.add("show");
+    }
+}
+</script>
+</body>
+</html>
